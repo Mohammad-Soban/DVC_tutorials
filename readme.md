@@ -36,7 +36,9 @@
 - This also adds the data file to the `.gitignore` file so that the data file is not tracked by git.
 - Also inside the project we get a `.dvc` file which contains the hash key of the data file which is stored in the cloud storage. (Here data.dvc file will be created.)
 - After getting the changes in gitignore file and the new data.dvc file, we need to add the changes to git by running the command: `git add .` and then `git commit -m "Message"` so that the changes are saved in the git repository.
-
+- Then we need to push the changes to the remote repository by running the command: `git push origin master`
+- Now we need to commit the changes to the DVC by running the command: `dvc commit` and then push the changes to the remote storage by running the command: `dvc push`
+- This will push all the files to the remote storage and the data file will be versioned and also another file will be pushed which would store the metadata of the data file and the hash key of the data file.
 
 *NOTE : The above steps can only be done if git is not tracking the `<path to data file>`. Also the git needs to be initialized in the project.*
 
@@ -45,3 +47,5 @@
 - Then we need to run the command git commit -m "Message"
 - Then we can add the data file to DVC by running the command: `dvc add <path to data file>`
 
+### To check the status of the data files
+- To check the status of the data files run the following command: `dvc status`
