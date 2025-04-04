@@ -49,3 +49,15 @@
 
 ### To check the status of the data files
 - To check the status of the data files run the following command: `dvc status`
+
+### To check the history of the data files
+- To check the history of the data files run the following command: `dvc history`
+- This will show the history of the data files and the hash keys of the data files.
+
+### To check the contents of the data files
+- To check the contents of the data files run the following command: `dvc cat <path to data file>`
+- This will show the contents of the data files.
+- This will also show the hash key of the data file.
+- To get a specific version of the data file run the following command: `dvc checkout <path to data file>`
+
+### 
