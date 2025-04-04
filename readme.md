@@ -60,4 +60,6 @@
 - This will also show the hash key of the data file.
 - To get a specific version of the data file run the following command: `dvc checkout <path to data file>`
 
-### 
+### To rollback to a previous version of the data file
+- To rollback to a previous version of data along with the code, first rollback the code using the command `git checkout <commit id>` to a particular commit id.
+- Then run the command `dvc pull` to get the data file of that commit id.
