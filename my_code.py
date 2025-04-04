@@ -10,6 +10,9 @@ new_rows = [{'name': 'john', 'age': '28', 'city': 'Pune'},
 
 df = pd.concat([df, pd.DataFrame(new_rows)], ignore_index=True)
 
+# Now change the age of nick to 16
+df.loc[df['name'] == 'nick', 'age'] = '16' 
+
 data_dir = "data"
 os.makedirs(data_dir, exist_ok=True)
 
