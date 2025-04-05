@@ -61,5 +61,10 @@
 - To get a specific version of the data file run the following command: `dvc checkout <path to data file>`
 
 ### To rollback to a previous version of the data file
-- To rollback to a previous version of data along with the code, first rollback the code using the command `git checkout <commit id>` to a particular commit id.
-- Then run the command `dvc pull` to get the data file of that commit id.
+- To rollback to a previous version of data along with the code, first rollback the code using the command `git checkout <commit id>` to a particular commit id or git pull to get the latest version of the code.
+- Then run the command `dvc pull` to get the data file of that commit id or that version.
+- This will get the data file of that version and the code will be in sync with the data file.
+
+### To remove a data file from DVC
+- To remove a data file from DVC run the following command: `dvc remove <path to data file>`
+- This will remove the data file from DVC and also remove the data file from the remote storage.
